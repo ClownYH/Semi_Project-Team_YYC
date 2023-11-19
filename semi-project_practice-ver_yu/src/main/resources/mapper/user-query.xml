@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <entry key="insertUser">
+        INSERT INTO yyc_user(
+        user_no,
+        user_loginId,
+        user_password,
+        user_nickname,
+        user_name,
+        date_of_birth,
+        gender,
+        contact_no
+        ) VALUES(
+            NULL,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?
+        )
+    </entry>
+
+    <entry key="checkUserId">
+        SELECT
+            user_loginId
+        FROM yyc_user
+        WHERE user_loginId = ?
+    </entry>
+    <entry key="userLogin">
+        SELECT
+            user_loginId,
+            user_password,
+            user_nickname
+            FROM yyc_user
+        WHERE user_loginId = ?
+    </entry>
+
+    <entry key="findUser">
+        SELECT
+            user_loginId,
+            user_password,
+            user_name,
+            date_of_birth,
+            gender,
+            contact_no,
+            address_no,
+            user_nickname
+        FROM
+            yyc_user
+        WHERE
+            user_loginId = ?
+    </entry>
+
+    <entry key="updateUser">
+        UPDATE yyc_user
+        SET user_nickname = ?
+        WHERE
+            user_loginId = ?
+    </entry>
+
+
+
+</properties>
