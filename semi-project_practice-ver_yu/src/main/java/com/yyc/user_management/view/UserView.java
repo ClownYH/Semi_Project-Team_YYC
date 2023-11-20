@@ -22,7 +22,7 @@ public class UserView {
 
         while (true) {
             System.out.println("회원관리 프로그램입니다.");
-            System.out.println("1. 회원정보 조회 \n2. 회원정보 수정 \n3. 회원 탈퇴 \n4. 삭제");
+            System.out.println("1. 회원정보 조회 \n2. 회원정보 수정 \n3. 회원 탈퇴 \netc. 종료");
             System.out.print("원하는 기능을 입력해주세요:");
 
             //1. 사용자가 원하는 기능을 선택함
@@ -43,10 +43,13 @@ public class UserView {
                     break;
 
                     // 2-3 회원 탈퇴
-                case 3: break;
+                case 3:
+                    System.out.println("현재 구현되지 않은 기능입니다.") ;break;
 
                     // 프로그램 종료
-                default: return;
+                default:
+                    System.out.println("프로그램 종료");
+                    System.exit(0);
             }
         }
 
